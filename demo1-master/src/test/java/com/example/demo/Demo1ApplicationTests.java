@@ -32,12 +32,7 @@ class Demo1ApplicationTests {
         assertTrue(categorieRepository.findById(categorie.getId()).isPresent());
     }
 
-    @Test
-    void ajoutProduit() {
-        Produit produit = new Produit("uniiiit", 4);
-        produitController.ajoutProduct(produit, 20);
-        assertTrue(produitRepository.findById(produit.getId()).isPresent());
-    }
+   
 
     @Test
     void updateCat() {
