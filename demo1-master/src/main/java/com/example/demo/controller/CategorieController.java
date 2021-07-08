@@ -28,12 +28,12 @@ public class CategorieController {
 
 
     @GetMapping("/categories")
-    public List<Categorie> getAllCategories() {
+    public List<Categorie> getAllategories() {
         return categorieRepository.findAll();
     }
 
     @PostMapping("/categorieajout")
-    public Categorie ajoutCategorie(@Validated @RequestBody Categorie cat) {
+    public Categorie Ajoutategorie(@Validated @RequestBody Categorie cat) {
         cat.setDate_Creation(new Timestamp(System.currentTimeMillis()));
 
         if (cat.getProduits() != null) {
@@ -47,12 +47,12 @@ public class CategorieController {
 
 
     @GetMapping("/categories/{id}")
-    public Categorie getCategoryById(@PathVariable(value = "id") long catId) {
+    public Categorie GetCategoryById(@PathVariable(value = "id") long catId) {
         return categorieService.getCat(catId);
     }
 
     @DeleteMapping("/categories/{id}")
-    public void deleteCategorie(@PathVariable(value = "id") long cat) {
+    public void DeleteCategorie(@PathVariable(value = "id") long cat) {
         if (categorieRepository.findById(cat).isPresent()) {
             var c = categorieRepository.findById(cat).get();
             categorieRepository.delete(c);
