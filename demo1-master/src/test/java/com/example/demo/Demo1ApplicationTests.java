@@ -27,12 +27,12 @@ class Demo1ApplicationTests {
 
     @Test
     void ajoutCategorie() {
-        Categorie categorie = new Categorie("uniiiit", 4);
+        Categorie categorie = new Categorie("uniiiitt", 4);
         categorieController.ajoutCategorie(categorie);
         assertTrue(categorieRepository.findById(categorie.getId()).isPresent());
     }
 
-   
+
 
     @Test
     void updateCat() {
