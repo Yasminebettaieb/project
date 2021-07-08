@@ -24,11 +24,7 @@ class Demo1ApplicationTests {
     @Autowired
     private CategorieController categorieController;
 
-   /*@Test
-    void deleteProd(){
-       if(produitRepository.findById(1L).isPresent())
-       produitRepository.deleteById(1L);
-   }
+
     @Test
     void ajoutCategorie() {
         Categorie categorie = new Categorie("uniiiit", 4);
@@ -56,6 +52,6 @@ class Demo1ApplicationTests {
         produitController.updateProduit(p, 8);
         assertTrue(produitRepository.findById(8L).get().getNomProduit().equals(p.getNomProduit()));
     }
-*/
+
 
 }
