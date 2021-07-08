@@ -47,8 +47,8 @@ public class CategorieController {
 
 
     @GetMapping("/categories/{id}")
-    public Categorie getCategoryById(@PathVariable(value = "id") long categoryId) {
-        return categorieService.getCat(categoryId);
+    public Categorie getCategoryById(@PathVariable(value = "id") long catId) {
+        return categorieService.getCat(catId);
     }
 
     @DeleteMapping("/categories/{id}")
